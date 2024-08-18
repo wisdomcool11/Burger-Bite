@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- swipe using CDN-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container{
+            position: relative;
+            height: 500px;
+            width: 1000px;
+            border: 3px solid blueviolet;
+            margin: 6vh auto;
+            background-color: #ccc;
+        }
+
+        .swiper {
+            width: 100%;
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+
+        .swiper-slide {
+            background-position: center;
+            background-size: cover;
+            width: 300px;
+            height: 300px;
+        }
+
+        .swiper-slide img {
+            display: block;
+            width: 100%;
+        }
+
+
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <!-- Swiper -->
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="burgar_&_chips.jpg" />
+            </div>
+            <div class="swiper-slide">
+                <img src="burgar_spicy_juicy.jpg" />
+            </div>
+            <div class="swiper-slide">
+                <img src="burgar_testy.jpg" />
+            </div>
+            <div class="swiper-slide">
+                <img src="burger.png" />
+            </div>
+            <div class="swiper-slide">
+                <img src="burger_beer.jpg" />
+            </div>
+            <div class="swiper-slide">
+                <img src="burger_chips__coleslaw.jpg" />
+            </div>
+            <div class="swiper-slide">
+                <img src="burger_cream.jpg" />
+            </div>
+            <div class="swiper-slide">
+                <img src="burger_fire.jpg" />
+            </div>
+            <div class="swiper-slide">
+                <img src="vegetable_burgerN.jpg" />
+            </div>
+        </div>
+
+            <div class="swiper-pagination"></div>
+        </div>
+
+    </div>
+
+    <!-- swiper js cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    
+    <script>
+            var swiper = new Swiper(".mySwiper", {
+            effect: "coverflow",
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: "auto",
+            coverflowEffect: {
+                rotate: 50,
+                stretch: 0,
+                depth: 100,
+                modifier: 1,
+                slideShadows: true,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+            },
+            });
+    </script>
+
+</body>
+</html>

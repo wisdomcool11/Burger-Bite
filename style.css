@@ -1001,7 +1001,8 @@ marquee p{
 
 /* #### section 3 ##### */
 #section_3,
-#section_4,#section_5{
+#section_4,
+#section_5{
     width: 100%;
     height: auto;
     padding:6.25rem; /*98px and 150px*/
@@ -1160,7 +1161,31 @@ marquee p{
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
+
+    perspective: 800px;
 }
+
+/* #slid1,#slid2,#slid3,
+#slid4,#slid5,#slid6{
+    animation: fadeInImg 1s forwards;
+    border: 6px solid yellow;
+}
+
+.fadeInImg{
+    animation: fadeInImg 1.5s forwards;
+} */
+
+@keyframes fadeInImg {
+    from{
+        opacity: 0;
+        transform: translateZ(-100px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
 
 /* this will remove the scroll bar in chrome */
 .burger__menu__img_wrap::-webkit-scrollbar{
@@ -1595,7 +1620,6 @@ marquee p{
 }
 
 
-
 /* ###################################### */
 /* ### media query @767px */
 
@@ -1683,3 +1707,314 @@ marquee p{
         font-size: 1rem;
     }
 }
+
+
+
+/* ################################## */
+/* ###### section 6 ############### */
+
+#section_6{
+    width: 100%;
+    height: auto;
+    padding: 3.125rem 0px;
+    /* border: 2px solid yellow; */
+}
+
+#sect__6__top{
+    width: 100%;
+    height: 100%;
+    padding: 0px 6.25rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+#newsletter{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 20px;
+}
+#newsletter p{
+    font-size: 1.3rem;
+}
+#newsletter .orangeCol,
+#newsletter .yellowCol{
+    font-size: 1.4rem;
+}
+
+#email__wrap{
+    width: 100%;
+    height: 100%;
+    display: flex; 
+    justify-content: content;
+    align-items: center;
+    /* position: relative; */
+    /* border: 2px solid yellow; */
+
+}
+
+#emailForm{
+    width: 100%;
+    height: 100%;
+    padding: 1rem 2rem;
+
+    position: relative;
+}
+
+input[type=text]{
+    width: 100%;
+    height: 46px;
+    border: none;
+    outline: none;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-color: var(--white);
+    padding: 6px 4px 6px 3rem;
+    font-size: 1.1rem;
+    color: #222;
+    font-family: var(--headers);
+}
+
+::placeholder{
+    font-size: 1rem;
+    color: var(--color_orange_dk);
+}
+
+input[type=submit]{
+    width: 10rem;
+    height: 40px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-color: var(--color_orange_dk);
+    color: var(--white);
+    border: none;
+    outline: none;
+    font-size: 1.1rem;
+    font-family: var(--headers);
+    letter-spacing: 2px;
+    cursor: pointer;
+    
+    position: absolute;
+    top: 20px;
+    right: 35px;
+
+    transition: transform 360ms ease-in,
+    background-color 250ms ease-out
+    ;
+    
+}
+
+input[type=submit]:hover{
+    transform: scale(1.079) translateX(-5px);
+}
+input[type=submit]:active{
+    transform:translateY(4px);
+    background-color: var(--color_orange_lit);
+}
+
+/*error message if email is not correct  */
+.error__msg{
+    width: 100%;
+    padding: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: red;
+    font-size: 0.866rem;
+}
+
+.error{
+    border:1px solid red ;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.success{
+    border-color:1px solid green;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+
+
+/* slides */
+#sect__6__bottom{
+    width: 100%;
+    height: 21.875rem;
+    position: relative;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    animation: slide 16s infinite;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+@media (max-width: 768px) {
+    #sect__6__top{
+        padding: 2rem 0.5rem;;
+    }
+
+    #emailForm{
+        padding: 0.5rem;
+    }
+    input[type=text]{
+        font-size: 0.95rem;
+        padding: 3px 4px 3px 2rem;
+    }
+    ::placeholder{
+        font-size: 0.9rem;
+        font-weight: 600;
+    }
+
+    input[type=submit]{
+        width: 6.25rem;
+        font-size: 0.8rem;
+
+        /* positioning */
+        top: 11px;
+        right: 10px;
+    }
+}
+
+@media (min-width: 769px) {
+
+    .swiper-slide:first-child {
+      transition: transform 100ms;
+    }
+
+    .swiper-slide:first-child img {
+      transition: box-shadow 500ms;
+    }
+
+    .swiper-slide.swiper-slide-active:first-child {
+      transform: translateX(50%);
+      z-index: 2;
+    }
+
+    .swiper-slide.swiper-slide-active:first-child img {
+      box-shadow: 0px 32px 80px rgba(0, 0, 0, 0.35);
+    }
+
+    .swiper-slide:nth-child(2) {
+      transition: transform 100ms;
+    }
+
+    .swiper-slide.swiper-slide-next:nth-child(2) {
+      transform: translateX(55%);
+      z-index: 1;
+    }
+
+    .swiper[dir="rtl"] .swiper-slide.swiper-slide-active:first-child {
+      transform: translateX(-50%);
+    }
+
+    .swiper[dir="rtl"] .swiper-slide.swiper-slide-next:nth-child(2) {
+      transform: translateX(-55%);
+    }
+}
+
+@media (max-width: 480px) {
+    #sect__6__top{
+        padding: 0px 0.5rem;;
+        flex-direction: column;
+    }
+    #emailForm{
+        padding: 0.5rem;
+    }
+    input[type=text]{
+        font-size: 0.95rem;
+        padding: 3px 4px 3px 2rem;
+    }
+    ::placeholder{
+        font-size: 0.9rem;
+        font-weight: 600;
+    }
+
+    input[type=submit]{
+        width: 100px;
+        font-size: 0.8rem;
+
+        /* positioning */
+        top: 11px;
+        right: 10px;
+    }
+
+    .swiper-slide {
+        animation: slideMore 16s infinite;
+    }
+
+    @keyframes slideMore {
+        0%{
+            transform: translateX(0);
+        }
+        20%{
+            transform: translateX(0);
+        }
+        25%{
+            transform: translateX(-100%);
+        }
+        30%{
+            transform: translateX(-100%);
+        }
+        35%{
+            transform: translateX(-200%);
+        }
+        40%{
+            transform: translateX(-200%);
+        }
+        55%{
+            transform: translateX(-300%);
+        }
+        60%{
+            transform: translateX(-300%);
+        }
+        65%{
+            transform: translateX(-400%);
+        }
+        70%{
+            transform: translateX(-400%);
+        }
+        75%{
+            transform: translateX(-500%);
+        }
+        80%{
+            transform: translateX(-500%);
+        }
+        85%{
+            transform: translateX(-600%);
+        }
+        90%{
+            transform: translateX(-600%);
+        }
+        95%{
+            transform: translateX(-700%);
+        }
+        100%{
+            transform: translateX(-700%);
+        }
+    }
+}
+

@@ -11,12 +11,14 @@
     <!-- external stylesheet -->
     <link rel="stylesheet" href="style.css">
     <!-- google font -->
-    <!-- headers -->
+    <!-- headers -text -->
     <link href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&display=swap" rel="stylesheet">
-    <!-- paragraph -->
+    <!-- paragraph -text -->
     <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&display=swap" rel="stylesheet">
     <!-- fontawesome -->
     <script src="https://kit.fontawesome.com/9753f25b53.js" crossorigin="anonymous"></script>
+    <!-- swipe using CDN-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
 </head>
 <body>
@@ -394,12 +396,12 @@
 
                     <div class="burger__menu__img">
                         <div class="burger__menu__img_wrap">
-                            <img src="classic_burger-removebg-preview.png" alt="classic burgar" id="slid1">
-                            <img src="Bacon_BBQ_Burger-removebg-preview.png" alt="bacon bbq burgar" id="slid2">
-                            <img src="burger_fire-removebg-preview.png" alt="bacon bbq burgar" id="slid3">
-                            <img src="vegetable_burgerN-removebg-preview.png" alt="bacon bbq burgar" id="slid4">
-                            <img src="chickenN_burger-removebg-preview.png" alt="bacon bbq burgar" id="slid5">
-                            <img src="italian_stallion_burger.png" alt="bacon bbq burgar" id="slid6">
+                            <img src="classic_burger-removebg-preview.png" alt="classic burgar" id="slid1" class="slid">
+                            <img src="Bacon_BBQ_Burger-removebg-preview.png" alt="bacon bbq burgar" id="slid2" class="slid">
+                            <img src="burger_fire-removebg-preview.png" alt="bacon bbq burgar" id="slid3" class="slid">
+                            <img src="vegetable_burgerN-removebg-preview.png" alt="bacon bbq burgar" id="slid4" class="slid">
+                            <img src="chickenN_burger-removebg-preview.png" alt="bacon bbq burgar" id="slid5" class="slid">
+                            <img src="italian_stallion_burger.png" alt="bacon bbq burgar" id="slid6" class="slid">
                         </div>
                     </div>
                 </div>
@@ -525,6 +527,113 @@
                     </div>
                     
                </div>
+
+                <!-- 
+               <div class="testimonial_2">
+                    <div class="slide__contianer swiper">
+
+                        <div class="slide__content">
+                            <div class="card__wrapper swiper-wrapper">
+                                <div class="card swiper-slide">
+                                    <div class="img__content">
+                                        <span class="overley2"></span>
+
+                                        <div class="card__image">
+                                            <img src="test_3.png" alt="" class="card__img">
+                                        </div>
+                                    </div>
+
+                                    <div class="card__content">
+                                        <h2 class="name">Chloe Fredrick</h2>
+                                        <p class="description">
+                                            I have been craving a good burger all week and yours hit the spot.
+                                            The cheese was melted to perfection and the bun was soft. so good!
+                                        </p>
+
+                                        <a href="#">
+                                            <button class="viewMoreBtn">View More</button>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+
+                    </div>
+
+               </div> -->
+            </div>
+
+        </section>
+
+        <section class="section_6" id="section_6">
+            <div id="sect__6__top">
+
+                <div id="newsletter">
+                    <p>Subscribe to our Newsletter</p>
+                    <p>
+                        <span class="orangeCol">Burger </span>
+                        <i class="fa-solid fa-burger"></i>
+                        <span class="yellowCol">Bite</span>
+                    </p>
+                </div>
+
+                <div id="email__wrap">  
+
+                    <form action="#" method="post" id="emailForm">
+                        <div class="control">
+                            <input type="text" id="email" placeholder="Your Email Address">
+                            <div class="error__msg"></div>
+                        </div>
+
+                        <input type="submit" id="SubscribeBtn" value="Subscribe">
+                    </form>  
+
+                </div>
+
+            </div>
+
+            <div id="sect__6__bottom">
+                <!-- Swiper -->
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <img src="burgar_&_chips.jpg" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="chickenN_burger.jpg" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="burgar_testy.jpg" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="burger_beer.jpg" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="burger_chips__coleslaw.jpg" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="burger_chips_coleslaw.jpg" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="burger_&_chips.jpg" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="burger_cream.jpg" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="vegetable_burgerN.jpg" />
+                      </div>
+                    </div>
+
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-scrollbar"></div>
+                    <div class="swiper-pagination"></div>
+                  </div>
+                        
             </div>
         </section>
 
@@ -537,5 +646,7 @@
 
     <!-- scripting -->
     <script src="app.js" defer></script>
+    <!-- swiper js cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </body>
 </html>
