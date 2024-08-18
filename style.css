@@ -744,7 +744,8 @@ marquee p{
 /* sections h2's */
 .sect_2__wrap h2,
 .sect__3__wrap h2,
-#sect__4__wrap h2{
+#sect__4__wrap h2,
+.footer__wrap h2{
     font-family: var(--headers);
     letter-spacing: 3px;
     font-size: 2.5rem;
@@ -931,7 +932,8 @@ marquee p{
     /* sections h2 */
     .sect_2__wrap h2,
     .sect__3__wrap h2,
-    #sect__4__wrap h2{
+    #sect__4__wrap h2,
+    .footer__wrap h2{
         font-size: 2rem;
     }
 
@@ -962,7 +964,8 @@ marquee p{
     /* section h2s */
     .sect_2__wrap h2,
     .sect__3__wrap h2,
-    #sect__4__wrap h2{
+    #sect__4__wrap h2,
+    .footer__wrap h2{
         font-size: 1.8rem;
         text-align: center;
     }
@@ -2017,4 +2020,105 @@ input[type=submit]:active{
         }
     }
 }
+
+/* #################### */
+/* ### foooter  */
+.footer{
+    width: 100%;
+    height: 55vh;
+    padding:  0px;
+    background-color: #111
+}
+
+.footer__wrap{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.orangeCol_footer{
+    color: var(--color_orange_dk)
+}
+.yellowCol_footer{
+    color: var(--color_yellow)
+}
+
+.footer__content{
+    width: 1000px;
+    /* height: 100%; */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+}
+
+/* footer card */
+.footer__card{
+    width: 250px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.2rem;
+}
+
+.footer__card h3{
+    font-family: var(--headers);
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.footer__card span{
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.7rem;
+}
+.footer__card span a{
+    color: var(--text-color);
+    text-decoration: none;
+    cursor: pointer;
+    transition: font-weight 350ms ease-in,
+        text-decoration 370ms ease-in,
+        transform 350ms ease-in
+    ;
+}
+.footer__card span a:hover{
+    transform: scale(0.9);
+    font-weight: 600;
+    animation: fadeIN_line 0.7s 0.2s ease-in;
+}
+
+@keyframes fadeIN_line {
+    from{
+        opacity: 0;
+        text-decoration: underline;
+        text-underline-offset: 12px;
+    }to{
+        opacity: 1;
+        text-decoration: underline;
+        text-underline-offset: 12px;
+    }
+}
+ 
+
+.address{
+    grid-column: 1/2;
+}
+
+.opening{
+    grid-column: 2/3;
+}
+.menuBurger{
+    grid-column: 3/4;
+    grid-row: 1/3;
+}
+
+
+
+
+
+
+
 
