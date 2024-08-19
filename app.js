@@ -64,8 +64,7 @@ const validateEmail= ()=>{
     }else if(!isValidEmail(emailValue)){
         setError(email, "make sure it's a valid email")
     }else{
-        setSuccess(email);
-        emailValue = '';// to reset
+        setSuccess(email);   
     }
 
 }
